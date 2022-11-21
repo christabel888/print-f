@@ -1,4 +1,5 @@
 #include "holberton.h"
+<<<<<<< HEAD
 
 /**
  * ev_print_func - returns the amount of identifiers.
@@ -7,6 +8,14 @@
  * Return: amount of identifiers.
  */
 
+=======
+/**
+ * ev_print_func - returns the amount of identifiers.
+ * @s: argument indentifier
+ * @index: index of argument identifier.
+ * Return: amount of identifiers.
+ */
+>>>>>>> 65bbba5174b267cd66af370a6a5cd934d8229762
 int ev_print_func(const char *s, int index)
 {
 	print_t pr[] = {
@@ -24,6 +33,7 @@ int ev_print_func(const char *s, int index)
 		{"+x", print_hex}, {"+X", print_upx}, {" i", prinsint},
 		{" d", prinsint}, {" u", print_unt}, {" o", print_oct},
 		{" x", print_hex}, {" X", print_upx}, {"R", print_rot},
+<<<<<<< HEAD
 		{"r", print_rev}, {"%", print_prg}, {"l",print_prg},
 		{"h", print_prg}, {" +i", prinpint}, {" +d", prinpint},
 		{"+ i", prinpint}, {"+ d", prinpint}, {" %", print_prg},
@@ -38,6 +48,24 @@ int ev_print_func(const char *s, int index)
 					index++, j++;
 				else
 					break;
+=======
+		{"r", print_rev}, {"%", print_prg}, {"l", print_prg},
+		{"h", print_prg}, {" +i", prinpint}, {" +d", prinpint},
+		{"+ i", prinpint}, {"+ d", prinpint}, {" %", print_prg},
+		{NULL, NULL},
+	};
+	int i = 0, j = 0, first_index;
+
+	first_index = index;
+	while (pr[i].type_arg)
+	{
+		if (s[index] == pr[i].type_arg[j])
+		{
+			if (pr[i].type_arg[j + 1] != '\0')
+				index++, j++;
+			else
+				break;
+>>>>>>> 65bbba5174b267cd66af370a6a5cd934d8229762
 		}
 		else
 		{
